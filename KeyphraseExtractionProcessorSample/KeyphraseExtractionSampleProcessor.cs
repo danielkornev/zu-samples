@@ -75,10 +75,15 @@ namespace ZU.Samples.Text.Extraction.KeyphraseExtractionProvider
 			KeyphrasesExtractionService.OnKeyphraseExtractionCompleted = OnJobCompleted;
 			KeyphrasesExtractionService.Start();
 
+			Log.Info(this.Name + " is starting...");
+
 			this.processor.RegisterProcessor(this);
+
+			Log.Info(this.Name + " registered with the Semantic Pipeline Processor");
 
 			subscribed = processor.Subscribe(new OnPublishedDelegate(OnFullTextExtracted), Constants.Topics.Properties.FullText, this.Name);
 
+			Log.Info(this.Name + " is ready");
 
 			return true;
 		}
@@ -87,9 +92,21 @@ namespace ZU.Samples.Text.Extraction.KeyphraseExtractionProvider
 		/// This callback is called by the host when full text has been extracted from the given entity
 		/// </summary>
 		/// <param name="Entity"></param>
-		private void OnFullTextExtracted(IEntity Entity)
+		private void OnFullTextExtracted(IEntity entity)
 		{
-			// TO DO:
+			var fullText = entity.FullText;
+
+			if (string.IsNullOrEmpty(fullText))
+			{
+				processor.ReportFailedProcessing(entity, Constants.Topics.Properties.Keyphrases);
+			}
+
+			KeyphrasesExtractionJob job = new KeyphrasesExtractionJob(entity, 15);
+			var jobs = new List<KeyphrasesExtractionJob>();
+			jobs.Add(job);
+
+			// adding new job to the Keyphrases Extraction Service
+			KeyphrasesExtractionService.Add(jobs.ToArray());
 		}
 
 		private void OnJobCompleted(IEntity entity, List<IKeyphrase> keyphrases, bool succeeded)

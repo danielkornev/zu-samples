@@ -35,8 +35,11 @@ namespace ZU.Samples.Text.Extraction.KeyphraseExtractionProvider
 		{
 			if (jobs != null)
 				foreach (var j in jobs)
-					//ToAdd.Add(j);
+				{
+					Log.Info("Sample Keyphrases Extraction Service got a new job");
+
 					ToAdd.Enqueue(j); // we add it to the queue
+				}
 		}
 		#endregion
 
@@ -63,6 +66,8 @@ namespace ZU.Samples.Text.Extraction.KeyphraseExtractionProvider
 			// internal lists
 
 			List<int> toDel = new List<int>();
+
+			Log.Info("Sample Keyphrases Extraction Service launched...");
 
 			// Main loop
 			while (!stopped)
