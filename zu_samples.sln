@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyphraseExtractionProcessorSample", "KeyphraseExtractionProcessorSample\KeyphraseExtractionProcessorSample.csproj", "{21276C89-F54D-4D3D-B9ED-6C4B5130D7F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Processors", "Processors", "{CF521300-D704-4AC8-A363-C36BC3679FEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{57B73017-C2B9-4942-B90D-52311E6E4656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnergyNetworkSystem.ZApp", "EnergyNetworkPlugin\EnergyNetworkSystem.ZApp.csproj", "{1D05F591-683D-4499-8629-841D6A301554}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +21,16 @@ Global
 		{21276C89-F54D-4D3D-B9ED-6C4B5130D7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21276C89-F54D-4D3D-B9ED-6C4B5130D7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21276C89-F54D-4D3D-B9ED-6C4B5130D7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D05F591-683D-4499-8629-841D6A301554}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D05F591-683D-4499-8629-841D6A301554}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D05F591-683D-4499-8629-841D6A301554}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D05F591-683D-4499-8629-841D6A301554}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21276C89-F54D-4D3D-B9ED-6C4B5130D7F7} = {CF521300-D704-4AC8-A363-C36BC3679FEF}
+		{1D05F591-683D-4499-8629-841D6A301554} = {57B73017-C2B9-4942-B90D-52311E6E4656}
 	EndGlobalSection
 EndGlobal

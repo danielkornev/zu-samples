@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D05F591-683D-4499-8629-841D6A301554}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnergyNetworkSystem</RootNamespace>
+    <AssemblyName>EnergyNetworkSystem.ZApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Drops\Latest\Plugins\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SAL.Flatbed, Version=1.2.7.0, Culture=neutral, PublicKeyToken=81cd27c630db6689, processorArchitecture=MSIL">
+      <HintPath>..\packages\SAL.Flatbed.1.2.7.0\lib\net20\SAL.Flatbed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZU.Core.Developer, Version=2.0.5973.3528, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZU.Core.Developer.2.0.5973.3528\lib\net45\ZU.Core.Developer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EnergyNetworkSystemConstants.cs" />
+    <Compile Include="EnergyNetworkSystemZApp.cs" />
+    <Compile Include="EnergyNetworkSystemZApp.Properties.cs" />
+    <Compile Include="EnergyNetworkSystemZApp.ZetApp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dependences\Microsoft.Windows.Shell\Microsoft.Windows.Shell.csproj">
+      <Project>{55d5297c-f1df-4b76-a3c1-d82cc294eebb}</Project>
+      <Name>Microsoft.Windows.Shell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZU.Base\ZU.WindowsBase.csproj">
+      <Project>{631828eb-4e91-455f-8247-64aa23d7308f}</Project>
+      <Name>ZU.WindowsBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZU.WPF.Resources\ZU.WPF.Resources.csproj">
+      <Project>{8abfb2d9-6d73-48aa-aa02-7abe0497d32a}</Project>
+      <Name>ZU.WPF.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZU.WPF.Shared\ZU.WPF.Shared.csproj">
+      <Project>{8ee9d866-d79a-4663-9710-e38c42c64828}</Project>
+      <Name>ZU.WPF.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\EquipmentItem.png" />
+    <Resource Include="Images\TechnicalLocation.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
