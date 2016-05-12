@@ -99,6 +99,7 @@ namespace ZU.Samples.Text.Extraction.KeyphraseExtractionProvider
 			if (string.IsNullOrEmpty(fullText))
 			{
 				processor.ReportFailedProcessing(entity, Constants.Topics.Properties.Keyphrases);
+				return;
 			}
 
 			KeyphrasesExtractionJob job = new KeyphrasesExtractionJob(entity, 15);
