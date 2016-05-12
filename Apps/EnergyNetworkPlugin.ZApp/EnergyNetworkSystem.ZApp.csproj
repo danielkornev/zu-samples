@@ -39,11 +39,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <HintPath>..\..\packages\ZU.WindowsBase.1.0.0.0\lib\net45\Microsoft.WindowsAPICodePack.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <HintPath>..\..\packages\ZU.WindowsBase.1.0.0.0\lib\net45\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -75,7 +75,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ZU.PresentationFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\ZU.PresentationFramework.dll</HintPath>
+      <HintPath>..\..\packages\ZU.WindowsBase.1.0.0.0\lib\net45\ZU.PresentationFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ZU.Windows.Shell, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
@@ -83,7 +83,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="ZU.WindowsBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\ZU.WindowsBase.dll</HintPath>
+      <HintPath>..\..\packages\ZU.WindowsBase.1.0.0.0\lib\net45\ZU.WindowsBase.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ZU.WPF.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
