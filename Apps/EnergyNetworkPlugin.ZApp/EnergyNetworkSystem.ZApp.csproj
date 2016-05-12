@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\Drops\Latest\Plugins\</OutputPath>
+    <OutputPath>bin\debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,14 +30,38 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Humanizer, Version=2.0.1.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Humanizer.Core.2.0.1\lib\dotnet\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.2.4.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MahApps.Metro.1.2.4.0\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\Microsoft.WindowsAPICodePack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="SAL.Flatbed, Version=1.2.7.0, Culture=neutral, PublicKeyToken=81cd27c630db6689, processorArchitecture=MSIL">
-      <HintPath>..\packages\SAL.Flatbed.1.2.7.0\lib\net20\SAL.Flatbed.dll</HintPath>
+      <HintPath>..\..\packages\SAL.Flatbed.1.2.7.0\lib\net20\SAL.Flatbed.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MahApps.Metro.1.2.4.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,7 +71,23 @@
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
     <Reference Include="ZU.Core.Developer, Version=2.0.5973.3528, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ZU.Core.Developer.2.0.5973.3528\lib\net45\ZU.Core.Developer.dll</HintPath>
+      <HintPath>..\..\packages\ZU.Core.Developer.2.0.5973.3528\lib\net45\ZU.Core.Developer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZU.PresentationFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\ZU.PresentationFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZU.Windows.Shell, Version=3.0.2.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZU.Windows.Shell.3.0.2.1\lib\net45\ZU.Windows.Shell.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZU.WindowsBase, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\ZU.WindowsBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ZU.WPF.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ZU.WPF.Shared.1.0.0.0\lib\net45\ZU.WPF.Shared.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -59,31 +99,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Dependences\Microsoft.Windows.Shell\Microsoft.Windows.Shell.csproj">
-      <Project>{55d5297c-f1df-4b76-a3c1-d82cc294eebb}</Project>
-      <Name>Microsoft.Windows.Shell</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZU.Base\ZU.WindowsBase.csproj">
-      <Project>{631828eb-4e91-455f-8247-64aa23d7308f}</Project>
-      <Name>ZU.WindowsBase</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZU.WPF.Resources\ZU.WPF.Resources.csproj">
-      <Project>{8abfb2d9-6d73-48aa-aa02-7abe0497d32a}</Project>
-      <Name>ZU.WPF.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ZU.WPF.Shared\ZU.WPF.Shared.csproj">
-      <Project>{8ee9d866-d79a-4663-9710-e38c42c64828}</Project>
-      <Name>ZU.WPF.Shared</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\EquipmentItem.png" />
     <Resource Include="Images\TechnicalLocation.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)$(TargetName).dll" "%25appdata%25\zet\plugins\" /F /R /Y /I</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
